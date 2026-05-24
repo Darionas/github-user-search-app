@@ -1,1 +1,248 @@
 @import "tailwindcss";
+
+/* fonts */
+@font-face {
+  font-family: 'Space Mono';
+  src: url('../assets/fonts/SpaceMono-Regular.ttf') format('truetype');
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Space Mono';
+  src: url('../assets/fonts/SpaceMono-Italic.ttf') format('truetype');
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Space Mono';
+  src: url('../assets/fonts/SpaceMono-Bold.ttf') format('truetype');
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Space Mono';
+  src: url('../assets/fonts/SpaceMono-BoldItalic.ttf') format('truetype');
+  font-style: italic;
+  font-weight: 700;
+  font-display: swap;
+}
+
+body {
+  font-family: 'Space Mono', monospace;
+  background-color: var(--color-neutral-100);
+  color: var(--color-neutral-900);
+}
+
+@theme {
+  /* Colors */
+	  --color-neutral-0: #FFFFFF;
+    --color-neutral-100: #F6F8FF;
+    --color-neutral-200: #90A4D4;
+    --color-neutral-300: #697C9A;
+    --color-neutral-500: #4B6A9B;
+    --color-neutral-700: #2B3442;
+    --color-neutral-800: #1E2A47;
+    --color-neutral-900: #141D2F;
+    --color-blue-300: #60ABFF;
+    --color-blue-500: #0079FF;
+    --color-red-500: #F74646;
+    /* Spacing */
+    --spacing-spacing-0: 0rem;
+    --spacing-spacing-025: 0.125rem; /* 2px */
+    --spacing-spacing-050: 0.25rem; /* 4px */
+    --spacing-spacing-075: 0.375rem; /* 6px */
+    --spacing-spacing-100: 0.5rem; /* 8px */
+    --spacing-spacing-125: 0.625rem; /* 10px */
+    --spacing-spacing-150: 0.75rem; /* 12px */
+    --spacing-spacing-200: 1rem; /* 16px */
+    --spacing-spacing-250: 1.25rem; /* 20px */
+    --spacing-spacing-300: 1.5rem; /* 24px */
+    --spacing-spacing-400: 2rem; /* 32px */
+    --spacing-spacing-500: 2.5rem; /* 40px */
+    --spacing-spacing-600: 3rem; /* 48px */
+    --spacing-spacing-800: 4rem; /* 64px */
+    --spacing-spacing-1000: 5rem; /* 80px */
+    /* Rounding */
+    --radius-radius-0: 0;
+    --radius-radius-4: 0.25rem; /* 4px */
+    --radius-radius-6: 0.375rem; /* 6px */
+    --radius-radius-8: 0.5rem; /* 8px */
+    --radius-radius-10: 0.625rem; /* 10px */
+    --radius-radius-12: 0.75rem; /* 12px */
+    --radius-radius-16: 1rem; /* 16px */
+    --radius-radius-20: 1.25rem; /* 20px */
+    --radius-radius-24: 1.5rem; /* 24px */
+    --radius-radius-full: 9999px;
+}
+
+/* typography */
+/* 26px */
+@utility text-preset-1 {
+  font-size: 1.625rem;
+  line-height: 1.2;
+  font-weight: 700;
+  letter-spacing: 0;
+}
+
+/* 22px */
+@utility text-preset-2 {
+  font-size: 1.375rem;
+  line-height: 1.4;
+  font-weight: 700;
+  letter-spacing: 0;
+}
+
+/* 18px */
+@utility text-preset-3 {
+  font-size: 1.125rem;
+  line-height: 1.4;
+  font-weight: 400;
+  letter-spacing: 0;
+}
+
+/* 13px mobile */
+@utility text-preset-3m {
+  font-size: 0.8125rem;
+  line-height: 1.4;
+  font-weight: 400;
+  letter-spacing: 0;
+}
+
+/* 16px */
+@utility text-preset-4 {
+  font-size: 1rem;
+  line-height: 1.5;
+  font-weight: 400;
+  letter-spacing: 0;
+}
+
+/* 16px */
+@utility text-preset-5 {
+  font-size: 1rem;
+  line-height: 1.5;
+  font-weight: 700;
+  letter-spacing: 0;
+}
+
+/* 15px */
+@utility text-preset-6 {
+  font-size: 0.9375rem;
+  line-height: 1.5;
+  font-weight: 400;
+  letter-spacing: 0;
+}
+
+/* 13px */
+@utility text-preset-7 {
+  font-size: 0.8125rem;
+  line-height: 1.5;
+  font-weight: 400;
+  letter-spacing: 0;
+}
+
+/* 13px */
+@utility text-preset-8 {
+  font-size: 0.8125rem;
+  line-height: 1.4;
+  font-weight: 700;
+  letter-spacing: 2.5;
+}
+
+/* utility classes */
+@utility searchBtn {
+    background-color: var(--color-blue-500);
+    color: var(--color-neutral-0);
+    padding: 0.75em 1.25em;
+    /* border: 2px solid transparent; */
+    border-radius: var(--radius-radius-10);
+    cursor: pointer;
+
+  &:hover {
+    background-color: var(--color-blue-300);
+  }
+
+  &:focus-visible {
+    border: 2px solid rgba(0, 0, 0, 1);
+    box-shadow: 0 0 0 2px #FFFFFF, 0 0 0 4px #0079FF;
+  }
+}
+
+@utility search-bar {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    background-color: var(--color-neutral-0);
+    border-radius: var(--radius-radius-20);
+    gap: auto;
+    padding: 0.5em 0.75em;
+    align-items: center;
+    border: 2px solid transparent;
+    box-shadow: 0 16px 30px 10px rgba(70,96,187,0.2);
+    outline: none;
+
+    &:focus-within {
+      border-color: var(--color-blue-500);
+    }
+
+    &:focus-visible {
+        border-color: var(--color-blue-500);
+    }
+}
+
+
+/* header, header > * {
+    border: 2px solid grey;
+} */
+
+/* 
+body {
+  background-color: white;
+  color: black;
+}
+
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: dark color;
+        color: light color;
+    }
+}
+*/
+
+/* ------------------------------------------------ */
+
+/*
+root selector part can be written in html head as <meta name="color-scheme" content="light dark">, 
+but it is also possible to write it in css as shown below.
+
+:root {                            
+  color-scheme: light dark;
+} 
+  
+Needed part below
+
+h1, h2, h3 {
+    color: custom dark color;
+}
+  
+@media (prefers-color-scheme: dark) {
+    h1, h2, h3 {
+        background-color: dark color;
+        color: custom light color;
+    }
+}
+
+But if you have a element with dark background color on light mode 
+
+form {
+    background-color: custom dark color;
+    color: custom light color;
+    color-scheme: dark;
+}
+
+*/
