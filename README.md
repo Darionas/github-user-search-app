@@ -34,7 +34,7 @@ Users should be able to:
 
 ### Screenshot
 
-![gitHub user finder](./assets/images/github_user_finder.png)
+![gitHub user finder](./github_user_finder.png)
 
 
 ### Links
